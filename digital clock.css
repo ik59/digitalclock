@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(21 20 20), rgb(21 20 20));
+}
+
+.designGlow {
+  padding: 10px;
+  border-radius: 20px;
+  animation: clockAnimation 1.2s linear infinite;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+}
+
+.digi-clock {
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-item {
+  font-family: sans-serif;
+  margin: 3px;
+  font-size: 60px;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clock span {
+  font-size: 65px;
+  font-weight: bolder;
+  color: #000;
+  margin-bottom: 13px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.second,
+.format {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 30px 0px 0px 10px;
+}
+
+.tarikh {
+  display: flex;
+  flex-basis: 70%;
+  padding: 20px 0 05px 0;
+  justify-self: center;
+}
+
+.tarikh-item {
+  font-family: fantasy;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 3px;
+  color: rgb(230, 230, 230);
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px 7px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px 0px rgba(19, 18, 18, 0.938);
+}
+
+.designer {
+  text-align: center;
+  margin: 35px 0 0 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  font-family: monospace;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes clockAnimation {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .designGlow {
+    padding: 7px;
+    border-radius: 15px;
+    animation: clockAnimation 1.5s linear infinite;
+  }
+
+  .digi-clock {
+    padding: 25px 35px;
+    border-radius: 10px;
+  }
+
+  .clock-item {
+    font-family: sans-serif;
+    margin: 2px;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .clock span {
+    font-size: 45px;
+    margin-bottom: 12px;
+  }
+
+  .second,
+  .format {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 15px 0px 0px 7px;
+  }
+
+  .tarikh {
+    padding: 10px 0 05px 0;
+  }
+
+  .tarikh-item {
+    font-size: 18px;
+    margin: 4px;
+    box-shadow: 0px 3px 3px 0px rgb(122, 110, 110);
+  }
+
+  .designer {
+    font-size: 20px;
+    margin: 20px auto auto auto;
+  }
+}
